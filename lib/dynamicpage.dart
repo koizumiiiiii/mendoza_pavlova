@@ -10,38 +10,40 @@ class Pavlova extends StatelessWidget {
         title: Text('Mendoza_Activity 1'
           ),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Image.asset('assets/images/Pavlova.jpg', fit: BoxFit.cover),
-            Padding(padding:  const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text('Strawberry Pavlova',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-                ),
-                const SizedBox(height: 8),
-                const Text("Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova."
-                           "Pavlova features a crisp crust and soft, light inside, topped with fruit and whipped cream.",
-                           style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black,
-                            height: 1.5,
-                           ),  
-                          ),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Image.asset('assets/images/Pavlova.jpg', fit: BoxFit.cover),
+              Padding(padding:  const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('Strawberry Pavlova',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                  const SizedBox(height: 8),
+                  const Text("Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova."
+                             "Pavlova features a crisp crust and soft, light inside, topped with fruit and whipped cream.",
+                             style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                              height: 1.5,
+                             ),  
+                            ),
 
-                          const SizedBox(height: 12),
-                          Center(child: buildRatingRow()),
-                          const SizedBox(height: 24),
-                          buildRowTabs(),
-                        ],
-                    ),
-                )
-          ],
+                            const SizedBox(height: 12),
+                            Center(child: buildRatingRow()),
+                            const SizedBox(height: 24),
+                            buildRowTabs(),
+                          ],
+                      ),
+                  )
+            ],
+          ),
         )
     );
   }
